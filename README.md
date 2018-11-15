@@ -15,6 +15,25 @@ Based on data, we will calculate the similarity among users/items for kNN by:
 - Minkowski distance
 - Cosine similarity
 
-All of those measure methods were implemented in python in measure.py file.
+All of those measure methods were implemented in python (measure.py).
 
-Reference: [Recommender Systems — User-Based and Item-Based Collaborative Filtering](https://medium.com/@cfpinela/recommender-systems-user-based-and-item-based-collaborative-filtering-5d5f375a127f)
+
+## Example
+We have a user-drink ratings matrix M below, where 6 users (rows) have rated 6 drink type (columns). Ratings can take up integer values from 1–10 and 0 indicates absence of rating. Now we have to decide that we should recommend coffee to user 2 (currently he is active user) or not. Assuming that user 2 will only like coffee if his rate is greater or equal to 5. 
+
+![alt text](https://i.imgur.com/6GnWWcG.png)
+
+This problem can be resolved by 2 ways:
+1. User-based collaborative filtering:
+- Using kNN to find k most similar user with action user.
+- Calculate average of other users' coffee rating. This will be rate of active user with coffee.
+
+2. Item-based collaborative filtering:
+- Using kNN to find k most similar items with coffee.
+- Calculate average of active user's rating with other drink type. This will be rate of active user with coffee.
+
+This example will be solved in coffee-recommend.py
+
+## Reference: 
+1. [Recommender Systems — User-Based and Item-Based Collaborative Filtering](https://medium.com/@cfpinela/recommender-systems-user-based-and-item-based-collaborative-filtering-5d5f375a127f)
+2. [Collaborative Filtering based Recommendation Systems exemplified..](https://towardsdatascience.com/collaborative-filtering-based-recommendation-systems-exemplified-ecbffe1c20b1)
