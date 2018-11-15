@@ -27,13 +27,13 @@ This problem can be resolved by 2 ways:
 1. User-based collaborative filtering:
 - Using kNN to find k most similar user with action user.
 - In order to predict the coffee rate of active user, we use the function:
-![alt text](https://cdn-images-1.medium.com/max/800/1*MdEImGMBgGY_5xltOJJAQA.png)
+![alt text](https://i.imgur.com/sdP2mCa.png)
 
   Where:
-    + p(a,i) is the prediction for active user a for item i
-    + r(a) and r(u) is average rating of user a and user u
-    + r(u,i) is rate of user u with item i
-    + w(a,u) is the similarity between users a and u
+    + r(x,s) is the prediction for active user x for item s
+    + r(x) is the average rating of user x
+    + r(y,s) is rate of user y with item s
+    + sim(x,y) is the similarity between users a and u
     + K is the neighborhood of most similar users.
 
 2. Item-based collaborative filtering:
