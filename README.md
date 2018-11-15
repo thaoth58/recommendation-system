@@ -14,6 +14,7 @@ Based on data, we will calculate the similarity among users/items for kNN by:
 - Manhattan distance
 - Minkowski distance
 - Cosine similarity
+
 All of those measure methods were implemented in python in measure.py file.
 
 Reference: [Recommender Systems — User-Based and Item-Based Collaborative Filtering](https://medium.com/@cfpinela/recommender-systems-user-based-and-item-based-collaborative-filtering-5d5f375a127f)
