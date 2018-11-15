@@ -26,7 +26,15 @@ We have a user-drink ratings matrix M below, where 6 users (rows) have rated 6 d
 This problem can be resolved by 2 ways:
 1. User-based collaborative filtering:
 - Using kNN to find k most similar user with action user.
-- Calculate average of other users' coffee rating. This will be rate of active user with coffee.
+- In order to predict the coffee rate of active user, we use the function:
+![alt text](https://cdn-images-1.medium.com/max/800/1*MdEImGMBgGY_5xltOJJAQA.png)
+
+  Where:
+    + p(a,i) is the prediction for active user a for item i
+    + r(a) and r(u) is average rating of user a and user u
+    + r(u,i) is rate of user u with item i
+    + w(a,u) is the similarity between users a and u
+    + K is the neighborhood of most similar users.
 
 2. Item-based collaborative filtering:
 - Using kNN to find k most similar items with coffee.
@@ -37,3 +45,5 @@ This example will be solved in coffee-recommend.py
 ## Reference: 
 1. [Recommender Systems — User-Based and Item-Based Collaborative Filtering](https://medium.com/@cfpinela/recommender-systems-user-based-and-item-based-collaborative-filtering-5d5f375a127f)
 2. [Collaborative Filtering based Recommendation Systems exemplified..](https://towardsdatascience.com/collaborative-filtering-based-recommendation-systems-exemplified-ecbffe1c20b1)
+3. [Item-Based Collaborative Filtering Recommendation Algorithms](http://www.ra.ethz.ch/cdstore/www10/papers/pdf/p519.pdf)
+4. [User-Based Collaborative-Filtering Recommendation Algorithms on Hadoop](https://www.researchgate.net/profile/Zhi-Dan_Zhao/publication/221306166_User-Based_Collaborative-Filtering_Recommendation_Algorithms_on_Hadoop/links/00b4952b5448b902d5000000.pdf)
