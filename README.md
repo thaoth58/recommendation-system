@@ -34,7 +34,7 @@ This problem can be resolved by 2 ways:
     + r(x) is the average rating of user x
     + r(y,s) is rate of user y with item s
     + sim(x,y) is the similarity between users a and u
-    + K is the neighborhood of most similar users.
+    + S(xy) is the neighborhood of most similar users.
 
 2. Item-based collaborative filtering:
 - Using kNN to find k most similar items with coffee.
