@@ -1,4 +1,4 @@
-# Recommendation system
+# Recommendation system research
 
 Recommendation system is aim to recommend some items to user. It can be devided into: 
 1. User-based collaborative filtering
